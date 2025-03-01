@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABC | Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #121212;
+            color: white;
+            text-align: center;
+        }
+
+        /* Navigation bar */
+        .navbar {
+        background-image:linear-gradient(to bottom,red 30%,green 45%,blue 10%);
+            background: #1e1e1e;
+            padding: 15px 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .navbar a {
+        background-image:linear-gradient(to right,red 20%,blue 90%
+            );
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            padding: 10px;
+            transition: 0.3s;
+        }
+
+        .navbar a:hover {
+            background: #f4a261;
+            color: black;
+            border-radius: 5px;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 100px 20px;
+            max-width: 800px;
+            margin: auto;
+            display: none; /* Hide all sections by default */
+        }
+
+        #about {
+            display: block; /* Show only "About" section initially */
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #f4a261;
+            margin-bottom: 20px;
+        }
+
+        p {
+            text-align: justify;
+            line-height: 1.6;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        /* Skills container */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .skill {
+            background: #f4a261;
+            color: black;
+            padding: 10px 15px;
+            border-radius: 10px;
+            font-size: 1.2em;
+        }
+
+        /* Certificates */
+        .certificates-container{
+            display:grid;
+            width:70%;
+            background -image:linear-gradient(to top,red45%,green 45%,blue 10%)
+        }
+        .certificate {
+            margin-top: 15px;
+            font-size: 1.2em;
+        }
+
+        .certificate a {
+            color: #f4a261;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .certificate a:hover {
+            text-decoration: underline;
+        }
+
+        /* Adjust for fixed navbar */
+        .content {
+            margin-top: 80px;
+        }
+.cert-img {
+    width: 80%; /* Adjust based on layout */
+    max-width: 300px; /* Prevents oversized images */
+    height: auto; /* Keeps aspect ratio */
+    border-radius: 10px; /* Slightly rounded corners */
+    box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.2); /* Adds a soft glow effect */
+    margin-bottom: 10px;
+    display: grid;
+}
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a onclick="showSection('about')">About</a>
+        <a onclick="showSection('skills')">Skills</a>
+        <a onclick="showSection('projects')">Projects</a>
+        <a onclick="showSection('certificates')">Certificates</a>
+    </div>
+
+    <div class="content">
+        <!-- About Section (Visible by default) -->
+        <section id="about">
+            <h1>PS SUDHARSAN</h1>
+            <h2>Undergraduate in Electronics and Communication Engineering</h2>
+            <p>
+                I am a pre-final year Electronics and Communication Engineering student with a strong foundation in Network Theory, Op-Amps, and Digital Logic.
+                I have experience in Python, MATLAB, and circuit simulation tools like Proteus and LTSpice. Passionate about VLSI design and AI in healthcare.
+            </p>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills-container">
+                <div class="skill">Python</div>
+                <div class="skill">MATLAB</div>
+                <div class="skill">Proteus</div>
+                <div class="skill">LTSpice</div>
+                <div class="skill">C Programming</div>
+                <div class="skill">Circuit Simulation</div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <H2>Projects</h2>
+          <strong> <p style="text-align:center;"> EVM using Arduino Microcontroller</p></strong>
+            <p >
+                The Electronic Voting Machine project features eight switches that are labeled S1 to S8, each corresponding to a candidate, and an the result is displayed on Arduino Serial Monitor.
+                Voters can cast their votes for their preferred candidates. The cumulative vote count for each candidate is displayed.The count of voting can be seen at last by pressing the button S9.
+            </p>
+            <h1 style=font-size:20px;">CIRCUIT DIAGRAM</h1>
+            <img src="cd.jpg" style="width:100%">
+            <h1 style=font-size:20px;">IMPLEMENTATION</h1>
+            <img src="im1.jpg" style="width:100%">
+            <img src="im2.jpg" style="width:100%">
+            <img src="im3.jpg" style="width:100%">
+          <strong>  <p style="text-align:center; padding:10px 10px;">Digital Combination Lock using Logic Gates</p></strong>
+            <p>
+                Digital combination lock built using logic gates essentially functions by comparing the user-entered code (input through switches) to a pre-set code stored within the circuit, using logic gates like XOR gates to check for bit-by-bit equality; if all digits match, the output signal indicates the correct combination and unlocks the system, while any mismatch results in a "not unlocked" signal; this comparison is done at each digit level, and an AND gate can be used to ensure all digits match before triggering the unlock mechanism. 
+            </p>
+            <h1 style=font-size:20px;">BLOCK DIAGRAM</h1>
+            <img src="BD.jpg" style="width:100%">
+            <h1 style=font-size:20px;">CIRCUIT DIAGRAM</h1>
+            <img src="CKT.jpg" style="width:100%">
+            <h1 style=font-size:20px;">IMPLEMENTATION</h1>
+            <img src="imp.jpg" style="width:100%">
+            
+                    </section>
+
+        <!-- Certificates Section -->
+        <section id="certificates">
+            <h2>Certificates</h2>
+            <div class="certificate">
+                <h3 style="font-size:20px">Introduction to C Programming </h3>
+                <img src=ICP.jpg alt="Introduction to C Programming" 
+                style="width:100%;">
+                 
+            </div>
+            <div class="certificate">
+                  <h3 style="font-size:20px">Essential Mathematics for Machine Learning</h3>
+                <img src=EML.jpg  style="width:100%;">
+                </br> 
+            </div>
+            <div class="certificate">
+
+            </div>
+        </section>
+
+        <footer style="position: absolute;z-index:-1; padding:500px 5px linear-gradient(to top,35%red,35%blie,30% green);"></footer>
+       
+            <h2>Contact</h2>
+            <p>Email: pssudharsan2004@gmail.com</p>
+            <p>LinkedIn: <a href="   https://www.linkedin.com/in/ps-s-2b22b926b"target="_blank"> PS SUDHARSAN</a></p>
+        
+    </div>
+    
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            let sections = document.querySelectorAll("section");
+            sections.forEach(section => {
+                section.style.display = "none";
+            });
+
+            // Show the selected section
+            document.getElementById(sectionId).style.display = "block";
+        }
+    </script>
+
+</body>
+</html>
